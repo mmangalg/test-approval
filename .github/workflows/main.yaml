@@ -61,17 +61,17 @@ jobs:
       - name: Generate ChangeSet
         run: |
                echo "Installing CDK..."
-               npm install -g aws-cdk@2.146.0
-               echo "Printing CDK version"
-               # cdk --version
+               # npm install -g aws-cdk@2.146.0
+               # echo "Printing CDK version"
+               # # cdk --version
 
 
-               # echo "Installing Python dependencies..."
-               # pip install -r requirements.txt
+               # # echo "Installing Python dependencies..."
+               # # pip install -r requirements.txt
 
-               # echo Build started on `date`
-               # echo "Building CDK stack..."
-               # ENV=$ENVIRONMENT cdk diff
+               # # echo Build started on `date`
+               # # echo "Building CDK stack..."
+               # # ENV=$ENVIRONMENT cdk diff
                
 
   ManualApprovalMain:
