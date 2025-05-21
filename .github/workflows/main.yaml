@@ -46,17 +46,17 @@ jobs:
     runs-on: ubuntu-latest
     needs: SourceCheckoutMain
     steps:
-      - name: configure aws credentials
-        uses: aws-actions/configure-aws-credentials@v1.7.0
-        with:
-          role-to-assume: arn:aws:iam::163437804291:role/hdfc-life-cdk-infra-repo #change to reflect your IAM role’s ARN
-          role-session-name: GitHub_to_AWS_via_FederatedOIDC
-          aws-region: ${{ env.AWS_REGION }}
+      # - name: configure aws credentials
+      #   uses: aws-actions/configure-aws-credentials@v1.7.0
+      #   with:
+      #     role-to-assume: arn:aws:iam::163437804291:role/hdfc-life-cdk-infra-repo #change to reflect your IAM role’s ARN
+      #     role-session-name: GitHub_to_AWS_via_FederatedOIDC
+      #     aws-region: ${{ env.AWS_REGION }}
           
-      - name: Download Source Artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: SourceArtifacts
+      # - name: Download Source Artifacts
+      #   uses: actions/download-artifact@v4
+      #   with:
+      #     name: SourceArtifacts
 
       - name: Generate ChangeSet
         run: |
